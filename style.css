@@ -486,6 +486,12 @@ section {
     gap: 15px;
 }
 
+/* Create space above the buttons */
+.projects > .container > .text-center,
+.blog > .container > .text-center {
+    margin-top: 40px;
+}
+
 .tab-btn {
     background: none;
     border: none;
