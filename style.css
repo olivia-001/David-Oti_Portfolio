@@ -647,12 +647,14 @@ section {
 /* Experience Section */
 .experience {
     background-color: var(--primary-dark);
+    padding: 80px 0;
 }
 
 .timeline {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
+    padding: 40px 0;
 }
 
 .timeline::before {
@@ -669,18 +671,19 @@ section {
 
 .timeline-item {
     position: relative;
-    width: 50%;
-    padding: 40px 50px;
+    width: calc(50% - 40px); /* Account for padding */
+    padding: 40px;
+    box-sizing: border-box;
     z-index: 2;
 }
 
 .timeline-item:nth-child(odd) {
-    left: 0;
+    margin-right: auto;
     padding-right: 80px;
 }
 
 .timeline-item:nth-child(even) {
-    left: 50%;
+    margin-left: auto;
     padding-left: 80px;
 }
 
@@ -694,14 +697,15 @@ section {
     font-weight: 700;
     font-size: 1.05rem;
     box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+    width: max-content;
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
-    right: -140px;
+    right: -120px;
 }
 
 .timeline-item:nth-child(even) .timeline-date {
-    left: -140px;
+    left: -120px;
 }
 
 .timeline-content {
@@ -726,11 +730,13 @@ section {
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
-    right: -71px;
+    right: -61px;
+    transform: translateX(50%);
 }
 
 .timeline-item:nth-child(even) .timeline-content::before {
-    left: -71px;
+    left: -61px;
+    transform: translateX(-50%);
 }
 
 .timeline-content h3 {
@@ -856,7 +862,6 @@ section {
 .blog-link:hover i {
     transform: translateX(5px);
 }
-
 /* Contact Section */
 .contact-container {
     display: flex;
